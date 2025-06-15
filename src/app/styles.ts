@@ -17,7 +17,7 @@ export const card: SxProps<Theme> = {
   padding: "20px",
   borderRadius: "2px",
   flexDirection: "column",
-  height: "100vh",
+  height: "100%",
   backgroundColor: "#FFFFFF",
 };
 
@@ -31,7 +31,7 @@ export const content = {
   width: "100%",
   display: "flex",
   flexDirection: "column",
-  gap: "32px",
+//   gap: "32px",
   alignItems: "center",
   height: "100%",
 } as const;
@@ -71,7 +71,7 @@ export const input: SxProps<Theme> = {
   height: "48px",
   fontSize: "14px",
   width: "100%",
-  fontWeight: "lighter",
+  fontWeight: 500,
 };
 
 export const loginButton = {

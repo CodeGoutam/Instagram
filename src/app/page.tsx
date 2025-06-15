@@ -18,8 +18,8 @@ const LoginPage = () => {
           <Box sx={styles.logoBox}>
             <Image
               src={"/assets/instagram.png"}
-              height={40}
-              width={40}
+              height={48}
+              width={48}
               alt="Instagram Logo"
             />
           </Box>
