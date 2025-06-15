@@ -17,7 +17,7 @@ export const card: SxProps<Theme> = {
   padding: "20px",
   borderRadius: "2px",
   flexDirection: "column",
-  height: "100%",
+//   height: "100%",
   backgroundColor: "#FFFFFF",
 //   gap: "100px",
 };
