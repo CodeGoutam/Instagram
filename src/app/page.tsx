@@ -9,6 +9,7 @@ const LoginPage = () => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.card}>
+        {/* language selection and logo section */}
         <Box
           sx={{
             width: "100%",
@@ -16,8 +17,8 @@ const LoginPage = () => {
             flexDirection: "column",
             // justifyContent: "space-evenly",
             alignItems: "center",
-            height: "50%",
-            gap: "auto",
+            height: "100%",
+            gap: "20%",
           }}
         >
           <Typography sx={styles.language}>
@@ -36,6 +37,7 @@ const LoginPage = () => {
           </Box>
         </Box>
 
+        {/* content section */}
         <div style={styles.content}>
           {/* form section */}
           <Box sx={styles.formSection}>
@@ -60,22 +62,23 @@ const LoginPage = () => {
             </form>
             <Typography sx={styles.forgotText}>Forgotten password?</Typography>
           </Box>
-
-          <Box sx={styles.footer}>
-            <Button variant="outlined" type="submit" style={styles.createBtn}>
-              Create new account
-            </Button>
-            <Box sx={styles.metaBox}>
-              <Image
-                src={"/assets/meta.png"}
-                height={16}
-                width={16}
-                alt="meta Logo"
-              />
-              <Typography sx={styles.metaText}>Meta</Typography>
-            </Box>
-          </Box>
         </div>
+
+        {/* footer section */}
+        <Box sx={styles.footer}>
+          <Button variant="outlined" type="submit" style={styles.createBtn}>
+            Create new account
+          </Button>
+          <Box sx={styles.metaBox}>
+            <Image
+              src={"/assets/meta.png"}
+              height={16}
+              width={16}
+              alt="meta Logo"
+            />
+            <Typography sx={styles.metaText}>Meta</Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

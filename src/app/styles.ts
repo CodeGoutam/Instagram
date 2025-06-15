@@ -12,20 +12,22 @@ export const card: SxProps<Theme> = {
   width: "100%",
   maxWidth: { sm: "100%", md: "350px" },
   display: "flex",
-  justifyContent: "start",
+  justifyContent: "space-between",
   alignItems: "center",
   padding: "20px",
   borderRadius: "2px",
   flexDirection: "column",
   height: "100%",
   backgroundColor: "#FFFFFF",
-  gap: "auto",
+//   gap: "100px",
 };
 
 export const language: SxProps<Theme> = {
   fontSize: "14px",
   color: "#8e8e8e",
   fontWeight: 600,
+  display: "flex",
+  justifyContent:"start"
 };
 
 export const content = {
@@ -34,11 +36,10 @@ export const content = {
   flexDirection: "column",
   alignItems: "center",
   height: "100%",
-  
 } as const;
 
 export const logoBox: SxProps<Theme> = {
-//   height: "50%",
+
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -46,7 +47,7 @@ export const logoBox: SxProps<Theme> = {
 
 export const formSection: SxProps<Theme> = {
   width: "100%",
-  height: "100%",
+//   height: "100%",
   display: "flex",
   flexDirection: "column",
   gap: "14px",
@@ -94,11 +95,11 @@ export const forgotText: SxProps<Theme> = {
 export const footer: SxProps<Theme> = {
   width: "100%",
   textAlign: "center",
-  height: "100%",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "end",
   gap: "8px",
+  height: "100%",
+  justifyContent: "flex-end",
 };
 
 export const createBtn = {
