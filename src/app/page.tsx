@@ -1,14 +1,24 @@
 "use client";
-import { Box, Button, Input, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Input,
+  Typography,
+  IconButton,
+  InputAdornment,
+} from "@mui/material";
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const LoginPage = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -129,7 +139,7 @@ const LoginPage = () => {
                 }
               />
               <Input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 disableUnderline
                 placeholder="Password"
                 sx={{
@@ -145,6 +155,16 @@ const LoginPage = () => {
                 name="password"
                 onChange={(e) =>
                   setFormData({ ...formData, password: e.target.value })
+                }
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      onClick={() => setShowPassword((prev) => !prev)}
+                      edge="end"
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
                 }
               />
             </div>
