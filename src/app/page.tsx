@@ -1,10 +1,14 @@
 "use client";
 import { Box, Button, Input, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
+  const router = useRouter();
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
   return (
     <Box
       sx={{
@@ -91,6 +95,10 @@ const LoginPage = () => {
                   width: "100%",
                   fontWeight: 500,
                 }}
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
               <Input
                 type="password"
@@ -105,8 +113,17 @@ const LoginPage = () => {
                   width: "100%",
                   fontWeight: 500,
                 }}
+                value={formData.password}
+                onChange={(e) =>
+                  setFormData({ ...formData, password: e.target.value })
+                }
               />
             </div>
+            <Typography
+              sx={{ color: "red", fontWeight: 200, fontSize: "12px" }}
+            >
+              {error}
+            </Typography>
             <Button
               type="submit"
               style={{
@@ -117,6 +134,18 @@ const LoginPage = () => {
                 cursor: "pointer",
                 height: "40px",
                 width: "100%",
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                if (!formData.email || !formData.password) {
+                  setError("Please fill in all fields.");
+                } else if (formData.email && formData.password) {
+                  router.push("https://www.instagram.com");
+                } else {
+                  setError("");
+
+                  console.log("Logging in with:", formData);
+                }
               }}
             >
               Log In
