@@ -48,8 +48,8 @@ const LoginPage = () => {
         <Box display={{ xs: "flex" }} justifyContent="center">
           <Image
             src={"/assets/instagram.png"}
-            height={48}
-            width={48}
+            height={60}
+            width={60}
             alt="Instagram Logo"
           />
         </Box>
@@ -125,8 +125,8 @@ const LoginPage = () => {
           <Typography
             sx={{
               fontSize: "12px",
-              color: "#8e8e8e",
-              fontWeight: 600,
+              color: "black",
+              fontWeight: 500,
               textAlign: "center",
             }}
           >
