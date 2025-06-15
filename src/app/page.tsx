@@ -1,7 +1,7 @@
 "use client";
 import { Box, Button, Input, Typography } from "@mui/material";
 import React from "react";
-// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Image from "next/image";
 import * as styles from "./styles";
 
@@ -9,19 +9,30 @@ const LoginPage = () => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.card}>
-        {/* <Typography sx={styles.language}>
-          English (UK)
-          <KeyboardArrowDownIcon />
-        </Typography> */}
+        <Box
+          sx={{
+            height: "50%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          <Typography sx={styles.language}>
+            English (UK)
+            <KeyboardArrowDownIcon />
+          </Typography>
 
-        {/* logo image */}
-        <Box sx={styles.logoBox}>
-          <Image
-            src={"/assets/instagram.png"}
-            height={48}
-            width={48}
-            alt="Instagram Logo"
-          />
+          {/* logo image */}
+          <Box sx={styles.logoBox}>
+            <Image
+              src={"/assets/instagram.png"}
+              height={48}
+              width={48}
+              alt="Instagram Logo"
+            />
+          </Box>
         </Box>
 
         <div style={styles.content}>
