@@ -8,7 +8,7 @@ export const wrapper: SxProps<Theme> = {
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "#fafafa",
-  overflow: "hidden", // prevent unwanted scroll
+  overflow: "hidden",
 };
 
 // Card container
@@ -20,6 +20,7 @@ export const card: SxProps<Theme> = {
   height: "100%",
   padding: "20px",
   backgroundColor: "#ffffff",
+  justifyContent: "space-between",
 };
 
 // Top language section
@@ -31,27 +32,33 @@ export const language: SxProps<Theme> = {
   justifyContent: "center",
   width: "100%",
   paddingBottom: "10px",
- 
 };
 
-// Flexible content area (logo + form)
+// Middle content wrapper (logo + form)
 export const content: SxProps<Theme> = {
   flexGrow: 1,
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center", // centers logo + form together
+  width: "100%",
+  overflowY: "auto",
+};
+
+// New wrapper to center logo & form
+export const logoFormWrapper: SxProps<Theme> = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
   alignItems: "center",
+  flexGrow: 1,
   gap: "24px",
   width: "100%",
-  overflowY: "auto", // scroll only when absolutely necessary
 };
 
 // Logo box
 export const logoBox: SxProps<Theme> = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center", 
-  height: "148px",
+  alignItems: "center",
 };
 
 // Form Section
