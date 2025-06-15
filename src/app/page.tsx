@@ -11,12 +11,13 @@ const LoginPage = () => {
       <Box sx={styles.card}>
         <Box
           sx={{
-            height: "50%",
             width: "100%",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-evenly",
+            // justifyContent: "space-evenly",
             alignItems: "center",
+            height: "50%",
+            gap: "auto",
           }}
         >
           <Typography sx={styles.language}>

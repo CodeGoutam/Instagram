@@ -12,13 +12,14 @@ export const card: SxProps<Theme> = {
   width: "100%",
   maxWidth: { sm: "100%", md: "350px" },
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "start",
   alignItems: "center",
   padding: "20px",
   borderRadius: "2px",
   flexDirection: "column",
   height: "100%",
   backgroundColor: "#FFFFFF",
+  gap: "auto",
 };
 
 export const language: SxProps<Theme> = {
@@ -33,10 +34,11 @@ export const content = {
   flexDirection: "column",
   alignItems: "center",
   height: "100%",
+  
 } as const;
 
 export const logoBox: SxProps<Theme> = {
-  height: "50%",
+//   height: "50%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -44,7 +46,7 @@ export const logoBox: SxProps<Theme> = {
 
 export const formSection: SxProps<Theme> = {
   width: "100%",
-  height: "50%",
+  height: "100%",
   display: "flex",
   flexDirection: "column",
   gap: "14px",
@@ -92,7 +94,7 @@ export const forgotText: SxProps<Theme> = {
 export const footer: SxProps<Theme> = {
   width: "100%",
   textAlign: "center",
-  height: "50%",
+  height: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "end",
