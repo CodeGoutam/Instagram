@@ -20,7 +20,6 @@ export const card: SxProps<Theme> = {
   height: "100%",
   padding: "20px",
   backgroundColor: "#ffffff",
-
 };
 
 // Top language section
@@ -51,8 +50,8 @@ export const content: SxProps<Theme> = {
 export const logoBox: SxProps<Theme> = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center",
-  marginTop: "40px",
+  alignItems: "center", 
+  height: "148px",
 };
 
 // Form Section

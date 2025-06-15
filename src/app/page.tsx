@@ -23,6 +23,7 @@ const LoginPage = () => {
             alt="Instagram Logo"
           />
         </Box>
+
         {/* Middle:  Form */}
         <Box sx={styles.content}>
           {/* Form Section */}
