@@ -3,7 +3,7 @@ import { SxProps, Theme } from "@mui/material";
 // Main full-screen wrapper
 export const wrapper: SxProps<Theme> = {
   width: "100vw",
-  height: "100dvh", // use dvh to fix mobile chrome issues
+  height: "100dvh",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -20,6 +20,7 @@ export const card: SxProps<Theme> = {
   height: "100%",
   padding: "20px",
   backgroundColor: "#ffffff",
+
 };
 
 // Top language section
@@ -28,9 +29,10 @@ export const language: SxProps<Theme> = {
   color: "#8e8e8e",
   fontWeight: 600,
   display: "flex",
-  justifyContent: "flex-start",
+  justifyContent: "center",
   width: "100%",
   paddingBottom: "10px",
+ 
 };
 
 // Flexible content area (logo + form)
@@ -50,6 +52,7 @@ export const logoBox: SxProps<Theme> = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  marginTop: "40px",
 };
 
 // Form Section

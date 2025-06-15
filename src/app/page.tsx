@@ -15,17 +15,16 @@ const LoginPage = () => {
           <KeyboardArrowDownIcon />
         </Typography>
 
-        {/* Middle: Logo + Form */}
+        <Box sx={styles.logoBox}>
+          <Image
+            src={"/assets/instagram.png"}
+            height={48}
+            width={48}
+            alt="Instagram Logo"
+          />
+        </Box>
+        {/* Middle:  Form */}
         <Box sx={styles.content}>
-          <Box sx={styles.logoBox}>
-            <Image
-              src={"/assets/instagram.png"}
-              height={48}
-              width={48}
-              alt="Instagram Logo"
-            />
-          </Box>
-
           {/* Form Section */}
           <Box sx={styles.formSection}>
             <form style={styles.form}>
