@@ -35,7 +35,7 @@ export const content = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  height: "100%",
+//   height: "100%",
 } as const;
 
 export const logoBox: SxProps<Theme> = {
@@ -47,7 +47,6 @@ export const logoBox: SxProps<Theme> = {
 
 export const formSection: SxProps<Theme> = {
   width: "100%",
-//   height: "100%",
   display: "flex",
   flexDirection: "column",
   gap: "14px",
@@ -98,7 +97,6 @@ export const footer: SxProps<Theme> = {
   display: "flex",
   flexDirection: "column",
   gap: "8px",
-  height: "100%",
   justifyContent: "flex-end",
 };
 

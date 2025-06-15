@@ -17,8 +17,6 @@ const LoginPage = () => {
             flexDirection: "column",
             // justifyContent: "space-evenly",
             alignItems: "center",
-            height: "100%",
-            gap: "20%",
           }}
         >
           <Typography sx={styles.language}>
