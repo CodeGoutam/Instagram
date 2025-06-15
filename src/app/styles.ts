@@ -31,7 +31,6 @@ export const content = {
   width: "100%",
   display: "flex",
   flexDirection: "column",
-//   gap: "32px",
   alignItems: "center",
   height: "100%",
 } as const;

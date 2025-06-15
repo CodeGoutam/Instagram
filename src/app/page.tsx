@@ -9,20 +9,23 @@ const LoginPage = () => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.card}>
-        <Typography sx={styles.language}>
+        {/* <Typography sx={styles.language}>
           English (UK)
           <KeyboardArrowDownIcon />
-        </Typography>
+        </Typography> */}
+
+        {/* logo image */}
+        <Box sx={styles.logoBox}>
+          <Image
+            src={"/assets/instagram.png"}
+            height={48}
+            width={48}
+            alt="Instagram Logo"
+          />
+        </Box>
 
         <div style={styles.content}>
-          <Box sx={styles.logoBox}>
-            <Image
-              src={"/assets/instagram.png"}
-              height={48}
-              width={48}
-              alt="Instagram Logo"
-            />
-          </Box>
+          {/* form section */}
           <Box sx={styles.formSection}>
             <form style={styles.form}>
               <div style={styles.inputWrapper}>
