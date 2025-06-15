@@ -45,7 +45,7 @@ const LoginPage = () => {
           <KeyboardArrowDownIcon />
         </Typography>
 
-        <Box display={{ xs: "none", sm: "flex" }} justifyContent="center">
+        <Box display={{ xs: "flex" }} justifyContent="center">
           <Image
             src={"/assets/instagram.png"}
             height={48}
