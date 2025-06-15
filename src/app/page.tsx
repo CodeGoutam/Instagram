@@ -9,22 +9,14 @@ const LoginPage = () => {
   return (
     <Box sx={styles.wrapper}>
       <Box sx={styles.card}>
-        {/* language selection and logo section */}
-        <Box
-          sx={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            // justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
-          <Typography sx={styles.language}>
-            English (UK)
-            <KeyboardArrowDownIcon />
-          </Typography>
+        {/* Top: Language Section */}
+        <Typography sx={styles.language}>
+          English (UK)
+          <KeyboardArrowDownIcon />
+        </Typography>
 
-          {/* logo image */}
+        {/* Middle: Logo + Form */}
+        <Box sx={styles.content}>
           <Box sx={styles.logoBox}>
             <Image
               src={"/assets/instagram.png"}
@@ -33,18 +25,15 @@ const LoginPage = () => {
               alt="Instagram Logo"
             />
           </Box>
-        </Box>
 
-        {/* content section */}
-        <div style={styles.content}>
-          {/* form section */}
+          {/* Form Section */}
           <Box sx={styles.formSection}>
             <form style={styles.form}>
               <div style={styles.inputWrapper}>
                 <Input
                   type="text"
                   disableUnderline
-                  placeholder="Username,email address or mobile number"
+                  placeholder="Username, email address or mobile number"
                   sx={styles.input}
                 />
                 <Input
@@ -60,9 +49,9 @@ const LoginPage = () => {
             </form>
             <Typography sx={styles.forgotText}>Forgotten password?</Typography>
           </Box>
-        </div>
+        </Box>
 
-        {/* footer section */}
+        {/* Bottom: Footer */}
         <Box sx={styles.footer}>
           <Button variant="outlined" type="submit" style={styles.createBtn}>
             Create new account

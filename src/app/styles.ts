@@ -1,50 +1,58 @@
 import { SxProps, Theme } from "@mui/material";
 
+// Main full-screen wrapper
 export const wrapper: SxProps<Theme> = {
   width: "100vw",
-  height: "100vh",
+  height: "100dvh", // use dvh to fix mobile chrome issues
   display: "flex",
   justifyContent: "center",
+  alignItems: "center",
   backgroundColor: "#fafafa",
+  overflow: "hidden", // prevent unwanted scroll
 };
 
+// Card container
 export const card: SxProps<Theme> = {
   width: "100%",
   maxWidth: { sm: "100%", md: "350px" },
   display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "20px",
-  borderRadius: "2px",
   flexDirection: "column",
-//   height: "100%",
-  backgroundColor: "#FFFFFF",
-//   gap: "100px",
+  height: "100%",
+  padding: "20px",
+  backgroundColor: "#ffffff",
 };
 
+// Top language section
 export const language: SxProps<Theme> = {
   fontSize: "14px",
   color: "#8e8e8e",
   fontWeight: 600,
   display: "flex",
-  justifyContent:"start"
+  justifyContent: "flex-start",
+  width: "100%",
+  paddingBottom: "10px",
 };
 
-export const content = {
-  width: "100%",
+// Flexible content area (logo + form)
+export const content: SxProps<Theme> = {
+  flexGrow: 1,
   display: "flex",
   flexDirection: "column",
+  justifyContent: "center", // centers logo + form together
   alignItems: "center",
-//   height: "100%",
-} as const;
+  gap: "24px",
+  width: "100%",
+  overflowY: "auto", // scroll only when absolutely necessary
+};
 
+// Logo box
 export const logoBox: SxProps<Theme> = {
-
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 };
 
+// Form Section
 export const formSection: SxProps<Theme> = {
   width: "100%",
   display: "flex",
@@ -82,6 +90,7 @@ export const loginButton = {
   border: "none",
   cursor: "pointer",
   height: "40px",
+  width: "100%",
 } as const;
 
 export const forgotText: SxProps<Theme> = {
@@ -93,11 +102,12 @@ export const forgotText: SxProps<Theme> = {
 
 export const footer: SxProps<Theme> = {
   width: "100%",
-  textAlign: "center",
   display: "flex",
   flexDirection: "column",
   gap: "8px",
   justifyContent: "flex-end",
+  alignItems: "center",
+  paddingTop: "10px",
 };
 
 export const createBtn = {
